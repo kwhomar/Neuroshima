@@ -1,0 +1,122 @@
+﻿<Window x:Class="Neuroshima.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Neuroshima"
+        mc:Ignorable="d"
+        Title="Program" Height="505.284" Width="795.137">
+    <Grid Margin="0,0,3.6,1">
+        <ListBox x:Name="skillSet" HorizontalAlignment="Left" Height="186" Margin="238,74,0,0" VerticalAlignment="Top" Width="162" SelectionChanged="skillSet_SelectionChanged">
+            <ListBoxItem x:Name="bijatyka" Content="Bijatyka"/>
+            <ListBoxItem Content="Broń ręczna"/>
+            <ListBoxItem Content="Rzucanie"/>
+            <ListBoxItem Content="Samochód"/>
+            <ListBoxItem Content="Motocykl"/>
+            <ListBoxItem Content="Ciężarówka"/>
+            <ListBoxItem Content="Kradzież kieszonkowa"/>
+            <ListBoxItem Content="Otwieranie zamków"/>
+            <ListBoxItem Content="Zwinne dłonie"/>
+            <ListBoxItem Content="Pistolety"/>
+            <ListBoxItem Content="Karabiny"/>
+            <ListBoxItem Content="Broń maszynowa"/>
+            <ListBoxItem Content="Luk"/>
+            <ListBoxItem Content="Kusza"/>
+            <ListBoxItem Content="Proca"/>
+            <ListBoxItem Content="Wyczucie kierunku"/>
+            <ListBoxItem Content="Przygotowanie pułapki"/>
+            <ListBoxItem Content="Tropienie"/>
+            <ListBoxItem Content="Nasłuchiwanie"/>
+            <ListBoxItem Content="Wypatrywanie"/>
+            <ListBoxItem Content="Czujność"/>
+            <ListBoxItem Content="Skradanie się"/>
+            <ListBoxItem Content="Ukrywanie się"/>
+            <ListBoxItem Content="Maskowanie"/>
+            <ListBoxItem Content="Lowiectwo"/>
+            <ListBoxItem Content="Znajomość terenu"/>
+            <ListBoxItem Content="Zdobywanie wody"/>
+            <ListBoxItem Content="Zastraszanie"/>
+            <ListBoxItem Content="Perswazja"/>
+            <ListBoxItem Content="Zdolności przywódcze"/>
+            <ListBoxItem Content="Postrzeganie emocji"/>
+            <ListBoxItem Content="Blef"/>
+            <ListBoxItem Content="Opieka nad zwierzętami"/>
+            <ListBoxItem Content="Odporność na ból"/>
+            <ListBoxItem Content="Niezłomność"/>
+            <ListBoxItem Content="Morale"/>
+            <ListBoxItem Content="Pierwsza pomoc"/>
+            <ListBoxItem Content="Leczenie ran"/>
+            <ListBoxItem Content="Leczenie chorób"/>
+            <ListBoxItem Content="Mechanika"/>
+            <ListBoxItem Content="Elektronika"/>
+            <ListBoxItem Content="Komputery"/>
+            <ListBoxItem Content="Maszyny ciężkie"/>
+            <ListBoxItem Content="Wozy bojowe"/>
+            <ListBoxItem Content="Kutry"/>
+            <ListBoxItem Content="Rusznikarstwo"/>
+            <ListBoxItem Content="Wyrzutnie"/>
+            <ListBoxItem Content="Materiały wybuchowe"/>
+            <ListBoxItem Content="Kondycja"/>
+            <ListBoxItem Content="Pływanie"/>
+            <ListBoxItem Content="Wspinaczka"/>
+            <ListBoxItem Content="Jazda konna"/>
+            <ListBoxItem Content="Powożenie"/>
+            <ListBoxItem Content="Ujeżdżanie"/>
+        </ListBox>
+        <TextBox x:Name="wyszukiwarka" HorizontalAlignment="Left" Height="17" Margin="238,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" TextChanged="wyszukiwarka_TextChanged"/>
+        <ListBox x:Name="attributeSet" HorizontalAlignment="Left" Height="104" Margin="144,74,0,0" VerticalAlignment="Top" Width="77" SelectionChanged="attributeSet_SelectionChanged">
+            <ListBoxItem Content="Zręczność"/>
+            <ListBoxItem Content="Percepcja"/>
+            <ListBoxItem Content="Charakter"/>
+            <ListBoxItem Content="Spryt"/>
+            <ListBoxItem Content="Budowa"/>
+        </ListBox>
+        <ListBox x:Name="gracze" ItemsSource ="{Binding Path = CollectionOfPlayers}" HorizontalAlignment="Left" Height="104" Margin="32,74,0,0" VerticalAlignment="Top" Width="94" SelectionChanged="gracze_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="32,183,0,0" TextWrapping="Wrap" Text="Szybka zmiana współczynników:" VerticalAlignment="Top" Width="189" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="zmiana" Content="Zmień" HorizontalAlignment="Left" Height="37" Margin="32,307,0,0" VerticalAlignment="Top" Width="189" Click="zmiana_Click"/>
+        <Canvas Margin="33,209,425,118">
+            <TextBox x:Name="atrybut" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Canvas.Left="136" FontSize="20" Canvas.Top="2" TextAlignment="Center" TextChanged="atrybut_TextChanged"/>
+            <TextBlock HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Atrybut" VerticalAlignment="Top" Width="110" FontSize="20" Canvas.Left="10"/>
+            <TextBlock HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Zdolność" VerticalAlignment="Top" Width="110" Canvas.Top="30" FontSize="20" Canvas.Left="10"/>
+            <TextBox x:Name="skill" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Canvas.Left="136" Canvas.Top="31" FontSize="20" TextAlignment="Center" TextChanged="skill_TextChanged"/>
+            <TextBlock HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" Text="Utrudnienie" VerticalAlignment="Top" Width="110" Canvas.Top="60" FontSize="20" Canvas.Left="10"/>
+            <TextBox x:Name="utrudnienie" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Canvas.Left="136" Canvas.Top="61" FontSize="20" TextAlignment="Center" TextChanged="utrudnienie_TextChanged"/>
+            <TextBox x:Name="A" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Canvas.Left="234" Canvas.Top="145" FontSize="20" TextAlignment="Center" TextChanged="A_TextChanged"/>
+            <TextBox x:Name="B" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Canvas.Left="317" Canvas.Top="145" FontSize="20" TextAlignment="Center" TextChanged="B_TextChanged"/>
+            <TextBox x:Name="C" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" Canvas.Left="402" Canvas.Top="145" FontSize="20" TextAlignment="Center" TextChanged="C_TextChanged"/>
+
+        </Canvas>
+        <Button x:Name="rzut" Content="Rzut" HorizontalAlignment="Left" Height="65" Margin="238,279,0,0" VerticalAlignment="Top" Width="261" FontSize="36" Click="rzut_Click"/>
+        <TextBlock x:Name="zdano" HorizontalAlignment="Left" Height="48" Margin="159,395,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" FontSize="36" TextAlignment="Center"/>
+        <ListBox x:Name="trudnosc_zdana" HorizontalAlignment="Left" Height="54" Margin="238,392,0,0" VerticalAlignment="Top" Width="442" FontSize="36">
+            <ListBox.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}"/>
+            </ListBox.Background>
+            <ListBox.BorderBrush>
+                <SolidColorBrush Color="#FFB4B4B4"/>
+            </ListBox.BorderBrush>
+            <ListBoxItem Content="Nie zdano"/>
+            <ListBoxItem Content="Łatwy"/>
+            <ListBoxItem Content="Normalny"/>
+            <ListBoxItem Content="Problematyczny"/>
+            <ListBoxItem Content="Trudny"/>
+            <ListBoxItem Content="Bardzo trudny"/>
+            <ListBoxItem Content="Cholernie trudny"/>
+            <ListBoxItem Content="Fart"/>
+            <ListBoxItem Content="Mistrzowski"/>
+            <ListBoxItem Content="Arcymistrzowski"/>
+            <ListBoxItem Content="Niewyobrażalnie trudny"/>
+            <ListBoxItem Content="Epicki"/>
+            <ListBoxItem Content="Niemożliwy"/>
+            <ListBoxItem Content="Legendarny"/>
+            <ListBoxItem Content="Boski"/>
+        </ListBox>
+        <CheckBox x:Name="tryb_szybki" Content="tryb szybki" HorizontalAlignment="Left" Margin="33,362,0,0" VerticalAlignment="Top" Checked="tryb_szybki_Checked_1" Unchecked="tryb_szybki_Checked_2" Height="16" Width="188"/>
+        <TextBox x:Name="nowy" HorizontalAlignment="Left" Height="17" Margin="32,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" TextAlignment="Center" TextChanged="nowy_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Height="17" Margin="33,22,0,0" TextWrapping="Wrap" Text="{Binding Path=CurrentSkill}" VerticalAlignment="Top" Width="93" FontWeight="Bold" FontStyle="Italic" TextAlignment="Center"/>
+        <Button x:Name="dodaj" Content="Dodaj" HorizontalAlignment="Left" Height="17" Margin="144,44,0,0" VerticalAlignment="Top" Width="50" FontSize="10" Click="dodaj_Click"/>
+        <Button x:Name="saveAll" Content="Zapisz zmiany" HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="122" Click="saveAll_Click" Margin="32,395,0,0" FontSize="16"/>
+        <Button x:Name="delete" Content="Usuń" HorizontalAlignment="Left" Height="17" Margin="199,44,0,0" VerticalAlignment="Top" Width="22" FontSize="8" Click="delete_Click"/>
+
+    </Grid>
+</Window>

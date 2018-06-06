@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neuroshima", "Test2\Neuroshima.csproj", "{5A18D9F6-3324-4D27-9D9E-A24D9EBEE2D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A18D9F6-3324-4D27-9D9E-A24D9EBEE2D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A18D9F6-3324-4D27-9D9E-A24D9EBEE2D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A18D9F6-3324-4D27-9D9E-A24D9EBEE2D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A18D9F6-3324-4D27-9D9E-A24D9EBEE2D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7080415-CF7B-4C9D-A772-70CE67183E84}
+	EndGlobalSection
+EndGlobal
